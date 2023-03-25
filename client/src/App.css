@@ -1,38 +1,52 @@
-.App {
-  text-align: center;
+/* Add your custom color palette */
+:root {
+  --primary-color: #000f14;
+  --secondary-color: #6c757d;
+  --accent-color: #ff64c4;
+  --light-color: #a6a6a6;
+  --dark-color: #212529;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo {
+  height: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (max-width: 575px) {
+  .logo {
+    max-height: 40px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--primary-color);
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-collapse {
+  background-color: var(--primary-color);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.nav-link {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: var(--light-color) !important;
+}
+
+.nav-link:hover {
+  color: var(--accent-color) !important;
+}
+
+.container-fluid {
+  padding: 0 15px;
+}
+
+/* Add responsive padding */
+@media screen and (min-width: 768px) {
+  .container-fluid {
+    padding: 0 30px;
   }
 }
+
+
