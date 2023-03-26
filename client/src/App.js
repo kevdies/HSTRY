@@ -10,7 +10,7 @@ import {
   NavLink,
 } from "reactstrap";
 import Home from "./Home";
-import NewHistory from "./NewHistory";
+import NewHistory from "./NewHistoryForm";
 import CompletedHistory from "./CompletedHistory";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
