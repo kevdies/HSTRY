@@ -50,7 +50,7 @@ const IdentifyingData = () => {
                 <FormGroup check>
                   <Label check>
                     <Input
-                      type="radio"
+                      type="checkbox"
                       name="appHandedness"
                       id="appHandednessLeft"
                       checked={appHandedness === "left"}
@@ -62,7 +62,7 @@ const IdentifyingData = () => {
                 <FormGroup check>
                   <Label check>
                     <Input
-                      type="radio"
+                      type="checkbox"
                       name="appHandedness"
                       id="appHandednessRight"
                       checked={appHandedness === "right"}
