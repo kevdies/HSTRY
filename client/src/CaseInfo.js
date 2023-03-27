@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FormGroup, Label, Input, Container, Row, Col, Button, Collapse } from "reactstrap";
+import { FormGroup, Label, Input, Container, Row, Col, Collapse } from "reactstrap";
 
 const CaseInfo = () => {
   const [appName, setAppName] = useState("");
