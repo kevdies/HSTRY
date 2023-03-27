@@ -63,13 +63,22 @@
   --dark-color: #7F7F7F;
 } */
 
-:root {
+/* :root {
   --primary-color: #5D5346;
   --secondary-color: #78866B;
   --accent-color: #AF8F7A;
   --light-color: #E3D3BF;
   --dark-color: #694F91;
+} */
+
+:root {
+  --primary-color: #694F91;
+  --secondary-color: #9F86C0;
+  --accent-color: #F5B041;
+  --light-color: #F7DCDC;
+  --dark-color: #2C3E50;
 }
+
 
 
 
