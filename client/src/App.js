@@ -9,6 +9,8 @@ import {
   NavItem,
   NavLink,
 } from "reactstrap";
+import "bootstrap-icons/font/bootstrap-icons.css";
+
 import Home from "./Home";
 import NewHistory from "./NewHistoryForm";
 import CompletedHistory from "./CompletedHistory";
