@@ -13,7 +13,7 @@ const Intro = () => {
   const [appName, setAppName] = useState("");
   const [appBodyPart, setAppBodyPart] = useState("");
   const [appDOI, setAppDOI] = useState("");
-  const [historyTranscriber, setHistoryTranscriber] = useState("");
+  const [historian, setHistorian] = useState("");
 
   //toggle collapse of form group
   const [isOpen, setIsOpen] = useState(false);
@@ -82,15 +82,15 @@ const Intro = () => {
               </FormGroup>
 
               <FormGroup className="custom-form-group">
-                <Label for="historyTranscriber">History Transcriber</Label>
+                <Label for="historian">Historian</Label>
                 <Input
                   className="form-control mb-3"
                   type="text"
-                  name="historyTranscriber"
-                  id="historyTranscriber"
-                  placeholder="Enter history transcriber"
-                  value={historyTranscriber}
-                  onChange={(e) => setHistoryTranscriber(e.target.value)}
+                  name="historian"
+                  id="historian"
+                  placeholder="Enter historian first and last name"
+                  value={historian}
+                  onChange={(e) => setHistorian(e.target.value)}
                 />
               </FormGroup>
             </Collapse>
