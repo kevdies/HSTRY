@@ -25,10 +25,23 @@ const CaseInfo = () => {
       <Container className="container-form">
         <Row>
           <Col>
-            <h3>Case Information</h3>
-            <Button onClick={toggle} style={{ marginBottom: "1rem" }}>
-              {isOpen ? "Close" : "Open"}
-            </Button>
+            <h3>
+              Case Information{" "}
+              {isOpen ? (
+                <i
+                  className="bi bi-caret-up-fill"
+                  onClick={toggle}
+                  style={{ cursor: "pointer", marginBottom: "1rem" }}
+                ></i>
+              ) : (
+                <i
+                  className="bi bi-caret-down-fill"
+                  onClick={toggle}
+                  style={{ cursor: "pointer", marginBottom: "1rem" }}
+                ></i>
+              )}
+            </h3>
+
             <Collapse isOpen={isOpen}>
               <FormGroup className="custom-form-group">
                 <Label for="appName">Applicant Name</Label>
