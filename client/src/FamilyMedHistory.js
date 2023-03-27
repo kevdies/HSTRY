@@ -44,7 +44,7 @@ const FamilyMedHistory = () => {
                 </Label>
                 <Input
                   className="form-control mb-3"
-                  type="text"
+                  type="textarea"
                   name="familyMedHistory"
                   id="familyMedHistory"
                   placeholder="Enter family medical history"
