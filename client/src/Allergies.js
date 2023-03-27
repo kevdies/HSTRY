@@ -11,6 +11,7 @@ import {
 
 const Allergies = () => {
   const [allergies, setAllergies] = useState("");
+  const [hasAllergies, setHasAllergies] = useState(false);
 
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
@@ -38,18 +39,32 @@ const Allergies = () => {
             </h3>
 
             <Collapse isOpen={isOpen}>
-              <FormGroup className="custom-form-group">
-                <Label for="allergies">Allergies</Label>
-                <Input
-                  className="form-control mb-3"
-                  type="text"
-                  name="allergies"
-                  id="allergies"
-                  placeholder="Enter allergies"
-                  value={allergies}
-                  onChange={(e) => setAllergies(e.target.value)}
-                />
+              <FormGroup check className="custom-form-group">
+                <Label check>
+                  <Input
+                    type="checkbox"
+                    name="hasAllergies"
+                    id="hasAllergies"
+                    checked={hasAllergies}
+                    onChange={(e) => setHasAllergies(e.target.checked)}
+                  />{" "}
+                  Has Allergies?
+                </Label>
               </FormGroup>
+              {hasAllergies && (
+                <FormGroup className="custom-form-group">
+                  <Label for="allergies">Allergies</Label>
+                  <Input
+                    className="form-control mb-3"
+                    type="text"
+                    name="allergies"
+                    id="allergies"
+                    placeholder="Enter allergies"
+                    value={allergies}
+                    onChange={(e) => setAllergies(e.target.value)}
+                  />
+                </FormGroup>
+              )}
             </Collapse>
           </Col>
         </Row>
