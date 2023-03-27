@@ -19,11 +19,30 @@ const JobDescription = () => {
   const [workHoursPerWeek, setWorkHoursPerWeek] = useState("");
   const [jobDescription, setJobDescription] = useState("");
   const [toolsAndBodyParts, setToolsAndBodyParts] = useState("");
-  const [appExposure, setAppExposure] = useState("");
   const [appPhysicalJobActivities, setAppPhysicalJobActivities] = useState("");
+  const [exposureTypes, setExposureTypes] = useState({
+    chemicals: false,
+    noise: false,
+    fumes: false,
+    smoke: false,
+    mold: false,
+    dust: false,
+    humidity: false,
+    wetness: false,
+    heights: false,
+    temperatureVariations: false,
+  });
 
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
+
+  const handleExposureTypeChange = (e) => {
+    const { name, checked } = e.target;
+    setExposureTypes((prev) => ({
+      ...prev,
+      [name]: checked,
+    }));
+  };
 
   return (
     <>
@@ -111,7 +130,7 @@ const JobDescription = () => {
                 <FormGroup check>
                   <Label check>
                     <Input
-                      type="radio"
+                      type="checkbox"
                       name="doesApplicantWork"
                       value="true"
                       checked={doesApplicantWork}
@@ -123,7 +142,7 @@ const JobDescription = () => {
                 <FormGroup check>
                   <Label check>
                     <Input
-                      type="radio"
+                      type="checkbox"
                       name="doesApplicantWork"
                       value="false"
                       checked={!doesApplicantWork}
@@ -187,18 +206,119 @@ const JobDescription = () => {
                   onChange={(e) => setToolsAndBodyParts(e.target.value)}
                 />
               </FormGroup>
-
               <FormGroup className="custom-form-group">
-                <Label for="appExposure">Applicant Exposure</Label>
-                <Input
-                  className="form-control mb-3"
-                  type="textarea"
-                  name="appExposure"
-                  id="appExposure"
-                  placeholder="Enter applicant exposure"
-                  value={appExposure}
-                  onChange={(e) => setAppExposure(e.target.value)}
-                />
+                <Label for="exposureTypes">Exposure Types:</Label>
+                <FormGroup check>
+                  <Label check>
+                    <Input
+                      type="checkbox"
+                      name="chemicals"
+                      checked={exposureTypes.chemicals}
+                      onChange={handleExposureTypeChange}
+                    />{" "}
+                    Chemicals
+                  </Label>
+                </FormGroup>
+                <FormGroup check>
+                  <Label check>
+                    <Input
+                      type="checkbox"
+                      name="noise"
+                      checked={exposureTypes.noise}
+                      onChange={handleExposureTypeChange}
+                    />{" "}
+                    Noise
+                  </Label>
+                </FormGroup>
+                <FormGroup check>
+                  <Label check>
+                    <Input
+                      type="checkbox"
+                      name="fumes"
+                      checked={exposureTypes.fumes}
+                      onChange={handleExposureTypeChange}
+                    />{" "}
+                    Fumes
+                  </Label>
+                </FormGroup>
+                <FormGroup check>
+                  <Label check>
+                    <Input
+                      type="checkbox"
+                      name="smoke"
+                      checked={exposureTypes.smoke}
+                      onChange={handleExposureTypeChange}
+                    />{" "}
+                    Smoke
+                  </Label>
+                </FormGroup>
+                <FormGroup check>
+                  <Label check>
+                    <Input
+                      type="checkbox"
+                      name="mold"
+                      checked={exposureTypes.mold}
+                      onChange={handleExposureTypeChange}
+                    />{" "}
+                    Mold
+                  </Label>
+                </FormGroup>
+                <FormGroup check>
+                  <Label check>
+                    <Input
+                      type="checkbox"
+                      name="dust"
+                      checked={exposureTypes.dust}
+                      onChange={handleExposureTypeChange}
+                    />{" "}
+                    Dust
+                  </Label>
+                </FormGroup>
+
+                <FormGroup check>
+                  <Label check>
+                    <Input
+                      type="checkbox"
+                      name="humidity"
+                      checked={exposureTypes.humidity}
+                      onChange={handleExposureTypeChange}
+                    />{" "}
+                    Humidity
+                  </Label>
+                </FormGroup>
+                <FormGroup check>
+                  <Label check>
+                    <Input
+                      type="checkbox"
+                      name="wetness"
+                      checked={exposureTypes.wetness}
+                      onChange={handleExposureTypeChange}
+                    />{" "}
+                    Wetness
+                  </Label>
+                </FormGroup>
+                <FormGroup check>
+                  <Label check>
+                    <Input
+                      type="checkbox"
+                      name="heights"
+                      checked={exposureTypes.heights}
+                      onChange={handleExposureTypeChange}
+                    />{" "}
+                    Heights
+                  </Label>
+                </FormGroup>
+                <FormGroup check>
+                  <Label check>
+                    <Input
+                      type="checkbox"
+                      name="temperatureVariations"
+                      checked={exposureTypes.temperatureVariations}
+                      onChange={handleExposureTypeChange}
+                    />{" "}
+                    Temperature Variations
+                  </Label>
+                </FormGroup>
               </FormGroup>
 
               <FormGroup className="custom-form-group">
