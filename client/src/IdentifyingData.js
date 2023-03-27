@@ -45,33 +45,32 @@ const IdentifyingData = () => {
             </h3>
 
             <Collapse isOpen={isOpen}>
-              <FormGroup check className="custom-form-group">
-                <Label check>
-                  <Input
-                    type="checkbox"
-                    name="appHandedness"
-                    id="appHandednessLeft"
-                    checked={appHandedness === "left"}
-                    onChange={(e) =>
-                      setAppHandedness(e.target.checked ? "left" : "right")
-                    }
-                  />{" "}
-                  Left-Handed
-                </Label>
-              </FormGroup>
-              <FormGroup check className="custom-form-group">
-                <Label check>
-                  <Input
-                    type="checkbox"
-                    name="appHandedness"
-                    id="appHandednessRight"
-                    checked={appHandedness === "right"}
-                    onChange={(e) =>
-                      setAppHandedness(e.target.checked ? "right" : "left")
-                    }
-                  />{" "}
-                  Right-Handed
-                </Label>
+              <FormGroup className="custom-form-group">
+                <Label>Applicant Handedness</Label>
+                <FormGroup check>
+                  <Label check>
+                    <Input
+                      type="radio"
+                      name="appHandedness"
+                      id="appHandednessLeft"
+                      checked={appHandedness === "left"}
+                      onChange={(e) => setAppHandedness("left")}
+                    />{" "}
+                    Left-Handed
+                  </Label>
+                </FormGroup>
+                <FormGroup check>
+                  <Label check>
+                    <Input
+                      type="radio"
+                      name="appHandedness"
+                      id="appHandednessRight"
+                      checked={appHandedness === "right"}
+                      onChange={(e) => setAppHandedness("right")}
+                    />{" "}
+                    Right-Handed
+                  </Label>
+                </FormGroup>
               </FormGroup>
 
               <FormGroup className="custom-form-group">
