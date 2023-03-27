@@ -42,7 +42,7 @@ const Medications = () => {
                 <Label for="medications">Medications</Label>
                 <Input
                   className="form-control mb-3"
-                  type="text"
+                  type="textarea"
                   name="medications"
                   id="medications"
                   placeholder="Enter medications"
