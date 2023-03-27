@@ -1,5 +1,13 @@
 import React, { useState } from "react";
-import { FormGroup, Label, Input, Container, Row, Col, Collapse } from "reactstrap";
+import {
+  FormGroup,
+  Label,
+  Input,
+  Container,
+  Row,
+  Col,
+  Collapse,
+} from "reactstrap";
 
 const IdentifyingData = () => {
   const [appHandedness, setAppHandedness] = useState("");
@@ -18,9 +26,9 @@ const IdentifyingData = () => {
   const [appEmployeeTitle, setAppEmployeeTitle] = useState("");
   const [appEmployer, setAppEmployer] = useState("");
 
-    //toggle collapse of form group
-    const [isOpen, setIsOpen] = useState(false);
-    const toggle = () => setIsOpen(!isOpen);
+  //toggle collapse of form group
+  const [isOpen, setIsOpen] = useState(false);
+  const toggle = () => setIsOpen(!isOpen);
 
   return (
     <>
@@ -50,7 +58,7 @@ const IdentifyingData = () => {
                 <FormGroup check>
                   <Label check>
                     <Input
-                      type="checkbox"
+                      type="radio"
                       name="appHandedness"
                       id="appHandednessLeft"
                       checked={appHandedness === "left"}
@@ -62,7 +70,7 @@ const IdentifyingData = () => {
                 <FormGroup check>
                   <Label check>
                     <Input
-                      type="checkbox"
+                      type="radio"
                       name="appHandedness"
                       id="appHandednessRight"
                       checked={appHandedness === "right"}

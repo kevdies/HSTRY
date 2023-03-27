@@ -19,7 +19,7 @@ const JobDescription = () => {
   const [workHoursPerWeek, setWorkHoursPerWeek] = useState("");
   const [jobDescription, setJobDescription] = useState("");
   const [toolsAndBodyParts, setToolsAndBodyParts] = useState("");
-  const [appPhysicalJobActivities, setAppPhysicalJobActivities] = useState("");
+
   const [exposureTypes, setExposureTypes] = useState({
     chemicals: false,
     noise: false,
@@ -32,6 +32,37 @@ const JobDescription = () => {
     heights: false,
     temperatureVariations: false,
   });
+  const [physicalActivities, setPhysicalActivities] = useState({
+    standing: false,
+    walking: false,
+    bending: false,
+    stooping: false,
+    kneeling: false,
+    squatting: false,
+    twisting: false,
+    turning: false,
+    pushing: false,
+    pulling: false,
+    lifting: false,
+    carrying: false,
+    climbing: false,
+    reachingAtOrAboveShoulderLevel: false,
+    movingHeadUpDown: false,
+    gripping: false,
+    grasping: false,
+    otherGrossUpperExtremityMovements: false,
+    fineHandFingerManipulation: false,
+  });
+
+  const handlePhysicalActivityChange = (event) => {
+    const { name, checked } = event.target;
+    const activityName = name.split(" ").join("");
+
+    setPhysicalActivities((prevState) => ({
+      ...prevState,
+      [activityName]: checked,
+    }));
+  };
 
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
@@ -322,18 +353,40 @@ const JobDescription = () => {
               </FormGroup>
 
               <FormGroup className="custom-form-group">
-                <Label for="appPhysicalJobActivities">
-                  Applicant Physical Job Activities
-                </Label>
-                <Input
-                  className="form-control mb-3"
-                  type="textarea"
-                  name="appPhysicalJobActivities"
-                  id="appPhysicalJobActivities"
-                  placeholder="Enter applicant physical job activities"
-                  value={appPhysicalJobActivities}
-                  onChange={(e) => setAppPhysicalJobActivities(e.target.value)}
-                />
+                <Label for="physicalActivities">Physical Activities:</Label>
+                {[
+                  "standing",
+                  "walking",
+                  "bending",
+                  "stooping",
+                  "kneeling",
+                  "squatting",
+                  "twisting",
+                  "turning",
+                  "pushing",
+                  "pulling",
+                  "lifting",
+                  "carrying",
+                  "climbing",
+                  "reaching at or above shoulder level",
+                  "moving his head up and/or down",
+                  "gripping",
+                  "grasping",
+                  "other gross upper extremity movements",
+                  "fine hand and finger manipulation",
+                ].map((activity) => (
+                  <FormGroup check key={activity}>
+                    <Label check>
+                      <Input
+                        type="checkbox"
+                        name={activity}
+                        checked={physicalActivities[activity]}
+                        onChange={handlePhysicalActivityChange}
+                      />{" "}
+                      {activity}
+                    </Label>
+                  </FormGroup>
+                ))}
               </FormGroup>
             </Collapse>
           </Col>
