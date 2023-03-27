@@ -1,10 +1,83 @@
-:root {
+/*theming colors to play with different looks*/
+/* :root {
   --primary-color: #000f14;
   --secondary-color: #6c757d;
   --accent-color: #ff64c4;
   --light-color: #a6a6a6;
   --dark-color: #212529;
+} */
+
+/* :root {
+  --primary-color: #355C7D;
+  --secondary-color: #6C5B7B;
+  --accent-color: #C06C84;
+  --light-color: #F8B195;
+  --dark-color: #2E4053;
+} */
+
+/* :root {
+  --primary-color: #393E46;
+  --secondary-color: #F7B801;
+  --accent-color: #00ADB5;
+  --light-color: #EEEEEE;
+  --dark-color: #222831;
+} */
+
+/* :root {
+  --primary-color: #44355B;
+  --secondary-color: #8D6E63;
+  --accent-color: #EF5350;
+  --light-color: #FCEADE;
+  --dark-color: #262A34;
+} */
+
+/* :root {
+  --primary-color: #5D5346;
+  --secondary-color: #7E736F;
+  --accent-color: #C2B8AD;
+  --light-color: #D3D3C9;
+  --dark-color: #2E2E2E;
+} */
+
+/* :root {
+  --primary-color: #595959;
+  --secondary-color: #7F7F7F;
+  --accent-color: #AF8F7A;
+  --light-color: #E3D3BF;
+  --dark-color: #2E2E2E;
+} */
+
+/* :root {
+  --primary-color: #5D5346;
+  --secondary-color: #7F7F7F;
+  --accent-color: #AF8F7A;
+  --light-color: #E3D3BF;
+  --dark-color: #694F91;
+} */
+
+/* :root {
+  --primary-color: #5D5346;
+  --secondary-color: #AF8F7A;
+  --accent-color: #694F91;
+  --light-color: #E3D3BF;
+  --dark-color: #7F7F7F;
+} */
+
+:root {
+  --primary-color: #5D5346;
+  --secondary-color: #78866B;
+  --accent-color: #AF8F7A;
+  --light-color: #E3D3BF;
+  --dark-color: #694F91;
 }
+
+
+
+
+
+
+
+
 
 .logo {
   height: 50px;
