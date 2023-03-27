@@ -68,6 +68,11 @@
   border-color: var(--accent-color);
 }
 
+.custom-form-group select:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 100, 196, 0.25);
+  border-color: var(--accent-color);
+}
+
 /* Heading styles */
 h3 {
   color: var(--accent-color);

@@ -45,17 +45,33 @@ const IdentifyingData = () => {
             </h3>
 
             <Collapse isOpen={isOpen}>
-              <FormGroup className="custom-form-group">
-                <Label for="appHandedness">Applicant Handedness</Label>
-                <Input
-                  className="form-control mb-3"
-                  type="text"
-                  name="appHandedness"
-                  id="appHandedness"
-                  placeholder="Enter applicant handedness"
-                  value={appHandedness}
-                  onChange={(e) => setAppHandedness(e.target.value)}
-                />
+              <FormGroup check className="custom-form-group">
+                <Label check>
+                  <Input
+                    type="checkbox"
+                    name="appHandedness"
+                    id="appHandednessLeft"
+                    checked={appHandedness === "left"}
+                    onChange={(e) =>
+                      setAppHandedness(e.target.checked ? "left" : "right")
+                    }
+                  />{" "}
+                  Left-Handed
+                </Label>
+              </FormGroup>
+              <FormGroup check className="custom-form-group">
+                <Label check>
+                  <Input
+                    type="checkbox"
+                    name="appHandedness"
+                    id="appHandednessRight"
+                    checked={appHandedness === "right"}
+                    onChange={(e) =>
+                      setAppHandedness(e.target.checked ? "right" : "left")
+                    }
+                  />{" "}
+                  Right-Handed
+                </Label>
               </FormGroup>
 
               <FormGroup className="custom-form-group">
@@ -103,7 +119,7 @@ const IdentifyingData = () => {
                   type="number"
                   name="appWeight"
                   id="appWeight"
-                  placeholder="Enter applicant weight"
+                  placeholder="Enter applicant weight in pounds"
                   value={appWeight}
                   onChange={(e) => setAppWeight(e.target.value)}
                 />
@@ -183,6 +199,7 @@ const IdentifyingData = () => {
                   id="appDOB"
                   placeholder="Enter applicant date of birth"
                   value={appDOB}
+                  max={new Date().toISOString().split("T")[0]}
                   onChange={(e) => setAppDOB(e.target.value)}
                 />
               </FormGroup>
@@ -208,6 +225,7 @@ const IdentifyingData = () => {
                   id="appDOI"
                   placeholder="Enter applicant date of injury"
                   value={appDOI}
+                  max={new Date().toISOString().split("T")[0]}
                   onChange={(e) => setAppDOI(e.target.value)}
                 />
               </FormGroup>
