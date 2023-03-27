@@ -10,11 +10,11 @@ const CaseInfo = () => {
   const [appWCABNumber, setAppWCABNumber] = useState("");
   const [appPanelQMENumber, setAppPanelQMENumber] = useState("");
   const [appDateOfEvaluation, setAppDateOfEvaluation] = useState("");
-  const [appAddress1, setAppAddress1] = useState("");
-  const [appAddress2, setAppAddress2] = useState("");
-  const [appCity, setAppCity] = useState("");
-  const [appState, setAppState] = useState("");
-  const [appZip, setAppZip] = useState("");
+  const [evaluationAddress1, setEvaluationAddress1] = useState("");
+  const [evaluationAddress2, setEvaluationAddress2] = useState("");
+  const [evaluationCity, setEvaluationCity] = useState("");
+  const [evaluationState, setEvaluationState] = useState("");
+  const [evaluationZip, setEvaluationZip] = useState("");
 
   //toggle collapse of form group
   const [isOpen, setIsOpen] = useState(false);
@@ -147,67 +147,67 @@ const CaseInfo = () => {
               </FormGroup>
 
               <FormGroup className="custom-form-group">
-                <Label for="appAddress1">Applicant Address Line 1</Label>
+                <Label for="evaluationAddress1">Evaluation Address Line 1</Label>
                 <Input
                   className="form-control mb-3"
                   type="text"
-                  name="appAddress1"
-                  id="appAddress1"
-                  placeholder="Enter applicant address line 1"
-                  value={appAddress1}
-                  onChange={(e) => setAppAddress1(e.target.value)}
+                  name="evaluationAddress1"
+                  id="evaluationAddress1"
+                  placeholder="Enter evaluation address line 1"
+                  value={evaluationAddress1}
+                  onChange={(e) => setEvaluationAddress1(e.target.value)}
                 />
               </FormGroup>
 
               <FormGroup className="custom-form-group">
-                <Label for="appAddress2">Applicant Address Line 2</Label>
+                <Label for="evaluationAddress2">Evaluation Address Line 2</Label>
                 <Input
                   className="form-control mb-3"
                   type="text"
-                  name="appAddress2"
-                  id="appAddress2"
-                  placeholder="Enter applicant address line 2 (optional)"
-                  value={appAddress2}
-                  onChange={(e) => setAppAddress2(e.target.value)}
+                  name="evaluationAddress2"
+                  id="evaluationAddress2"
+                  placeholder="Enter evaluation address line 2 (optional)"
+                  value={evaluationAddress2}
+                  onChange={(e) => setEvaluationAddress2(e.target.value)}
                 />
               </FormGroup>
 
               <FormGroup className="custom-form-group">
-                <Label for="appCity">Applicant City</Label>
+                <Label for="evaluationCity">Evaluation City</Label>
                 <Input
                   className="form-control mb-3"
                   type="text"
-                  name="appCity"
-                  id="appCity"
-                  placeholder="Enter applicant city"
-                  value={appCity}
-                  onChange={(e) => setAppCity(e.target.value)}
+                  name="evaluationCity"
+                  id="evaluationCity"
+                  placeholder="Enter evaluation city"
+                  value={evaluationCity}
+                  onChange={(e) => setEvaluationCity(e.target.value)}
                 />
               </FormGroup>
 
               <FormGroup className="custom-form-group">
-                <Label for="appState">Applicant State</Label>
+                <Label for="evaluationState">Evaluation State</Label>
                 <Input
                   className="form-control mb-3"
                   type="text"
-                  name="appState"
-                  id="appState"
-                  placeholder="Enter applicant state"
-                  value={appState}
-                  onChange={(e) => setAppState(e.target.value)}
+                  name="evaluationState"
+                  id="evaluationState"
+                  placeholder="Enter evaluation state"
+                  value={evaluationState}
+                  onChange={(e) => setEvaluationState(e.target.value)}
                 />
               </FormGroup>
 
               <FormGroup className="custom-form-group">
-                <Label for="appZip">Applicant Zip Code</Label>
+                <Label for="evaluationZip">Evaluation Zip Code</Label>
                 <Input
                   className="form-control mb-3"
                   type="text"
-                  name="appZip"
-                  id="appZip"
-                  placeholder="Enter applicant zip code"
-                  value={appZip}
-                  onChange={(e) => setAppZip(e.target.value)}
+                  name="evaluationZip"
+                  id="evaluationZip"
+                  placeholder="Enter evaluation zip code"
+                  value={evaluationZip}
+                  onChange={(e) => setEvaluationZip(e.target.value)}
                 />
               </FormGroup>
             </Collapse>
