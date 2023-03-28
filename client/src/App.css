@@ -111,8 +111,7 @@
 }
 
 .container-fluid {
-  padding: 0 0px;
-  border: 0 0px;
+  padding: 0 8px;
 }
 
 /* Form related styles */
