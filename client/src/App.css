@@ -111,7 +111,8 @@
 }
 
 .container-fluid {
-  padding: 0 15px;
+  padding: 0 0px;
+  border: 0 0px;
 }
 
 /* Form related styles */
@@ -201,6 +202,67 @@ form {
   background-color: var(--light-color);
   border-radius: 10px;
   padding: 20px;
+}
+
+
+/* Primary button styles */
+.btn-primary {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: white;
+}
+
+.btn-primary:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 100, 196, 0.25);
+  border-color: var(--accent-color);
+}
+
+.btn-primary:active {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: white;
+}
+
+/* Secondary button styles */
+.btn-secondary {
+  background-color: var(--light-color);
+  border-color: var(--primary-color);
+  color: var(--dark-color);
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.btn-secondary:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+}
+
+.btn-secondary:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 100, 196, 0.25);
+  border-color: var(--accent-color);
+}
+
+.btn-secondary:active {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+}
+
+.btn-submit {
+  display: block; /* Centers the button */
+  margin: 0 auto; /* Centers the button */
+  padding: 10px 20px; /* Adds padding to the button */
 }
 
 

@@ -47,9 +47,9 @@ const NewHistoryForm = () => {
       <Medications />
       <Allergies />
       <SocialHistory />
-      <Button color="secondary">Submit History Report</Button>
+      <Button className="btn-submit" color="primary">Submit History Report</Button>
     </Form>
   );
 };
 
-export default NewHistoryForm;;
+export default NewHistoryForm;
