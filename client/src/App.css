@@ -1,10 +1,11 @@
 /*theming colors to play with different looks*/
+
 :root {
   --primary-color: #694f91;
   --secondary-color: #9f86c0;
   --accent-color: #ff647c;
   --light-color: #dfe0e2;
-  --dark-color: #1d1f20; 
+  --dark-color: #1d1f20;
 }
 
 /* :root {
@@ -14,6 +15,23 @@
   --light-color: #f7dcdc;
   --dark-color: #2c3e50;
 } */
+
+/* :root {
+--primary-color: #6d7c66;
+--secondary-color: #a19e88;
+--accent-color: #d8b99c;
+--light-color: #e8e4d8;
+--dark-color: #3c3f3a;
+} */
+
+/* :root {
+--primary-color: #7a6a55;
+--secondary-color: #b3a28e;
+--accent-color: #c9ac96;
+--light-color: #e5e0d6;
+--dark-color: #2a2824;
+} */
+
 
 .logo {
   height: 50px;
