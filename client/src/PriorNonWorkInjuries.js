@@ -44,10 +44,10 @@ const PriorNonWorkInjuries = () => {
                 </Label>
                 <Input
                   className="form-control mb-3"
-                  type="text"
+                  type="textarea"
                   name="priorNonWorkInjuries"
                   id="priorNonWorkInjuries"
-                  placeholder="Enter prior non-work injuries"
+                  placeholder="Enter any prior non-work injuries or 'applicant denies non-work injuries'"
                   value={priorNonWorkInjuries}
                   onChange={(e) => setPriorNonWorkInjuries(e.target.value)}
                 />

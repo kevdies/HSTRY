@@ -39,16 +39,16 @@ const OtherProblems = () => {
             <Collapse isOpen={isOpen}>
               <FormGroup className="custom-form-group">
                 <FormGroup>
-                      <Label for="otherProblems">Other Problems:</Label>
-                      <Input
-                        type="textarea"
-                        name="otherProblems"
-                        id="otherProblems"
-                        placeholder="comma separated list of problems i.e. stress, anxiety, depression, insomnia, stomach issues, etc"
-                        onChange={(e) => setOtherProblems(e.target.value)}
-                      />
-                    </FormGroup>
-                  </FormGroup>
+                  <Label for="otherProblems">Other Problems:</Label>
+                  <Input
+                    type="textarea"
+                    name="otherProblems"
+                    id="otherProblems"
+                    placeholder="comma separated list of problems i.e. stress, anxiety, depression, insomnia, stomach issues, etc"
+                    onChange={(e) => setOtherProblems(e.target.value)}
+                  />
+                </FormGroup>
+              </FormGroup>
             </Collapse>
           </Col>
         </Row>
