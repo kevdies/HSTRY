@@ -20,6 +20,7 @@ const JobDescription = () => {
   const [liftingRequirement, setLiftingRequirement] = useState("");
   const [toolsAndBodyParts, setToolsAndBodyParts] = useState("");
   const [activityFrequency, setActivityFrequency] = useState("");
+  const [exposureFrequency, setExposureFrequency] = useState("");
 
   const [exposureTypes, setExposureTypes] = useState({
     chemicals: false,
@@ -32,8 +33,8 @@ const JobDescription = () => {
     wetness: false,
     heights: false,
     temperatureVariations: false,
-    notexposed: false,
   });
+
   const [physicalActivities, setPhysicalActivities] = useState({
     standing: false,
     walking: false,
@@ -225,6 +226,21 @@ const JobDescription = () => {
                   onChange={(e) => setToolsAndBodyParts(e.target.value)}
                 />
               </FormGroup>
+
+              <FormGroup className="custom-form-group">
+                <Label for="exposureFrequency">
+                  Exposure... occasional, frequent
+                </Label>
+                <Input
+                  type="text"
+                  name="exposureFrequency"
+                  id="exposureFrequency"
+                  placeholder="enter occasionally, frequently or not exposed"
+                  value={exposureFrequency}
+                  onChange={setExposureFrequency}
+                />
+              </FormGroup>
+
               <FormGroup className="custom-form-group">
                 <Label for="exposureTypes">Exposure Types:</Label>
                 <FormGroup check>
@@ -336,18 +352,6 @@ const JobDescription = () => {
                       onChange={handleExposureTypeChange}
                     />{" "}
                     Temperature Variations
-                  </Label>
-                </FormGroup>
-
-                <FormGroup check>
-                  <Label check>
-                    <Input
-                      type="checkbox"
-                      name="notexposed"
-                      checked={exposureTypes.notexposed}
-                      onChange={handleExposureTypeChange}
-                    />{" "}
-                    Not Exposed
                   </Label>
                 </FormGroup>
               </FormGroup>
