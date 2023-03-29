@@ -13,6 +13,13 @@ const PriorWorkHistory = () => {
   const [priorCompanyName, setPriorCompanyName] = useState("");
   const [priorCompanyBeginDate, setPriorCompanyBeginDate] = useState("");
   const [priorCompanyEndDate, setPriorCompanyEndDate] = useState("");
+  const [priorCompanyJobDescription, setPriorCompanyJobDescription] =
+    useState("");
+  const [priorCompanyExposure, setPriorCompanyExposure] = useState("");
+  const [priorCompanyPhysicalActivities, setPriorCompanyPhysicalActivities] =
+    useState("");
+  const [deniesHistory, setDeniesHistory] = useState("");
+
 
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
@@ -40,7 +47,18 @@ const PriorWorkHistory = () => {
             </h3>
 
             <Collapse isOpen={isOpen}>
-
+              <FormGroup className="custom-form-group">
+                <Label for="deniesHistory">Denies Prior Work History</Label>
+                <Input
+                  className="form-control mb-3"
+                  type="text"
+                  name="deniesHistory"
+                  id="deniesHistory"
+                  placeholder="enter 'Applicant denies prior work history' and move onto next section"
+                  value={deniesHistory}
+                  onChange={(e) => setDeniesHistory(e.target.value)}
+                />
+              </FormGroup>
               <FormGroup className="custom-form-group">
                 <Label for="priorCompanyName">Prior Company Name</Label>
                 <Input
@@ -79,6 +97,52 @@ const PriorWorkHistory = () => {
                   placeholder="Enter prior company end date"
                   value={priorCompanyEndDate}
                   onChange={(e) => setPriorCompanyEndDate(e.target.value)}
+                />
+              </FormGroup>
+              <FormGroup className="custom-form-group">
+                <Label for="priorCompanyJobDescription">
+                  Prior Company Job Description
+                </Label>
+                <Input
+                  className="form-control mb-3"
+                  type="text"
+                  name="priorCompanyJobDescription"
+                  id="priorCompanyJobDescription"
+                  placeholder="Enter prior company job description"
+                  value={priorCompanyJobDescription}
+                  onChange={(e) =>
+                    setPriorCompanyJobDescription(e.target.value)
+                  }
+                />
+              </FormGroup>
+
+              <FormGroup className="custom-form-group">
+                <Label for="priorCompanyExposure">Prior Company Exposure</Label>
+                <Input
+                  className="form-control mb-3"
+                  type="text"
+                  name="priorCompanyExposure"
+                  id="priorCompanyExposure"
+                  placeholder="Enter prior company exposure"
+                  value={priorCompanyExposure}
+                  onChange={(e) => setPriorCompanyExposure(e.target.value)}
+                />
+              </FormGroup>
+
+              <FormGroup className="custom-form-group">
+                <Label for="priorCompanyPhysicalActivities">
+                  Prior Company Physical Activities
+                </Label>
+                <Input
+                  className="form-control mb-3"
+                  type="text"
+                  name="priorCompanyPhysicalActivities"
+                  id="priorCompanyPhysicalActivities"
+                  placeholder="Enter prior company physical activities"
+                  value={priorCompanyPhysicalActivities}
+                  onChange={(e) =>
+                    setPriorCompanyPhysicalActivities(e.target.value)
+                  }
                 />
               </FormGroup>
             </Collapse>
