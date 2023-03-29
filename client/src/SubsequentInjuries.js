@@ -11,6 +11,8 @@ import {
 
 const SubsequentInjuries = () => {
   const [subsequentInjuries, setSubsequentInjuries] = useState("");
+  const [moreSubsequentInjuryInformation, setMoreSubsequentInjuryInformation] =
+    useState("");
 
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
@@ -42,12 +44,28 @@ const SubsequentInjuries = () => {
                 <Label for="subsequentInjuries">Subsequent Injuries</Label>
                 <Input
                   className="form-control mb-3"
-                  type="text"
+                  type="textarea"
                   name="subsequentInjuries"
                   id="subsequentInjuries"
-                  placeholder="Enter subsequent injuries"
+                  placeholder="Enter any injuries after this period and where and when they happend"
                   value={subsequentInjuries}
                   onChange={(e) => setSubsequentInjuries(e.target.value)}
+                />
+              </FormGroup>
+              <FormGroup className="custom-form-group">
+                <Label for="moreSubsequentInjuryInformation">
+                  Additional Subsequent Injury Information
+                </Label>
+                <Input
+                  className="form-control mb-3"
+                  type="textarea"
+                  name="moreSubsequentInjuryInformation"
+                  id="moreSubsequentInjuryInformation"
+                  placeholder="Enter any additional information about subsequent injuries"
+                  value={moreSubsequentInjuryInformation}
+                  onChange={(e) =>
+                    setMoreSubsequentInjuryInformation(e.target.value)
+                  }
                 />
               </FormGroup>
             </Collapse>
