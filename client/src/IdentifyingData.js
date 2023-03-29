@@ -120,7 +120,7 @@ const IdentifyingData = () => {
                 />
               </FormGroup>
               <FormGroup className="custom-form-group">
-                <Label for="appWeight">Applicant Weight</Label>
+                <Label for="appWeight">Applicant Weight (pounds)</Label>
                 <Input
                   className="form-control mb-3"
                   type="number"
@@ -185,13 +185,13 @@ const IdentifyingData = () => {
               </FormGroup>
 
               <FormGroup className="custom-form-group">
-                <Label for="appZip">Applicant Zip</Label>
+                <Label for="appZip">Applicant Zip Code</Label>
                 <Input
                   className="form-control mb-3"
                   type="text"
                   name="appZip"
                   id="appZip"
-                  placeholder="Enter applicant zip"
+                  placeholder="Enter applicant zip code"
                   value={appZip}
                   onChange={(e) => setAppZip(e.target.value)}
                 />
