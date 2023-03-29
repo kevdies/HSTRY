@@ -11,6 +11,10 @@ import {
 
 const PriorWorkInjuries = () => {
   const [priorWorkInjuries, setPriorWorkInjuries] = useState("");
+    const [priorWorkInjuryClaims, setPriorWorkInjuryClaims] = useState("");
+    const [claimsSettled, setClaimsSettled] = useState("");
+    const [resultingRestrictions, setResultingRestrictions] = useState("");
+    const [priorRecovery, setPriorRecovery] = useState("");
 
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
@@ -42,12 +46,68 @@ const PriorWorkInjuries = () => {
                 <Label for="priorWorkInjuries">Prior Work Injuries</Label>
                 <Input
                   className="form-control mb-3"
-                  type="text"
+                  type="textarea"
                   name="priorWorkInjuries"
                   id="priorWorkInjuries"
                   placeholder="Enter prior work injuries"
                   value={priorWorkInjuries}
                   onChange={(e) => setPriorWorkInjuries(e.target.value)}
+                />
+              </FormGroup>
+
+              <FormGroup className="custom-form-group">
+                <Label for="priorWorkInjuryClaims">
+                  Prior Work Injury Claims
+                </Label>
+                <Input
+                  className="form-control mb-3"
+                  type="textarea"
+                  name="priorWorkInjuryClaims"
+                  id="priorWorkInjuryClaims"
+                  placeholder="Enter any prior work injury claims"
+                  value={priorWorkInjuryClaims}
+                  onChange={(e) => setPriorWorkInjuryClaims(e.target.value)}
+                />
+              </FormGroup>
+
+              <FormGroup className="custom-form-group">
+                <Label for="claimsSettled">Claims Settled</Label>
+                <Input
+                  className="form-control mb-3"
+                  type="textarea"
+                  name="claimsSettled"
+                  id="claimsSettled"
+                  placeholder="Enter any settled claims"
+                  value={claimsSettled}
+                  onChange={(e) => setClaimsSettled(e.target.value)}
+                />
+              </FormGroup>
+
+              <FormGroup className="custom-form-group">
+                <Label for="resultingRestrictions">
+                  Resulting Restrictions
+                </Label>
+                <Input
+                  className="form-control mb-3"
+                  type="textarea"
+                  name="resultingRestrictions"
+                  id="resultingRestrictions"
+                  placeholder="Enter any resulting restrictions"
+                  value={resultingRestrictions}
+                  onChange={(e) => setResultingRestrictions(e.target.value)}
+                />
+              </FormGroup>
+
+              <FormGroup className="custom-form-group">
+                <Label for="priorRecovery">Prior Recovery</Label>
+                <Input
+                  className="form-control mb-3"
+                  type="textarea"
+                  name="priorRecovery"
+                  id="priorRecovery"
+                  placeholder="Enter any prior recovery information i.e. fully recovered, still symptomatic"
+                  value={priorRecovery}
+                  onChange={(e) => setPriorRecovery(e.target.value)}
                 />
               </FormGroup>
             </Collapse>
