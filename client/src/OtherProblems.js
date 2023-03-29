@@ -7,7 +7,6 @@ import {
   Row,
   Col,
   Collapse,
-  FormText,
 } from "reactstrap";
 
 const OtherProblems = () => {

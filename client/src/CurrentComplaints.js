@@ -10,7 +10,7 @@ import {
 } from "reactstrap";
 
 const CurrentComplaints = () => {
-  const [currentComplaints, setCurrentComplaints] = useState("");
+  const [bodyPart, setBodyPart] = useState("");
 
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
@@ -39,15 +39,25 @@ const CurrentComplaints = () => {
 
             <Collapse isOpen={isOpen}>
               <FormGroup className="custom-form-group">
-                <Label for="currentComplaints">Current Complaints</Label>
+                <Label for="body part">Body Part</Label>
                 <Input
                   className="form-control mb-3"
                   type="text"
-                  name="currentComplaints"
-                  id="currentComplaints"
-                  placeholder="Enter current complaints"
-                  value={currentComplaints}
-                  onChange={(e) => setCurrentComplaints(e.target.value)}
+                  name="bodyPart"
+                  id="bodyPart"
+                  placeholder="Enter body part"
+                  value={bodyPart}
+                  onChange={(e) => setBodyPart(e.target.value)}
+                />
+              </FormGroup>
+              <FormGroup className="custom-form-group">
+                <Label for="frequency">Frequency</Label>
+                <Input
+                  className="form-control mb-3"
+                  type="text"
+                  name="frequency"
+                  id="frequency"
+                  placeholder="enter either continuous, frequent or intermittent"
                 />
               </FormGroup>
             </Collapse>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, Routes, Route } from "react-router-dom";
 import {
+  Container,
   Navbar,
   NavbarBrand,
   NavbarToggler,
@@ -29,7 +30,7 @@ function App() {
           <img
             className="logo"
             src={`${process.env.PUBLIC_URL}/HSTRY-logo.png`}
-            alt="Your Logo"
+            alt="HSTRY"
           />
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
@@ -54,13 +55,13 @@ function App() {
         </Collapse>
       </Navbar>
 
-      <div className="container-fluid mt-3">
+      <Container fluid>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/new-history" element={<NewHistory />} />
           <Route path="/completed-history" element={<CompletedHistory />} />
         </Routes>
-      </div>
+      </Container>
     </div>
   );
 }
