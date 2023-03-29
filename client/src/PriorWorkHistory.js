@@ -10,7 +10,9 @@ import {
 } from "reactstrap";
 
 const PriorWorkHistory = () => {
-  const [priorWorkHistory, setPriorWorkHistory] = useState("");
+  const [priorCompanyName, setPriorCompanyName] = useState("");
+  const [priorCompanyBeginDate, setPriorCompanyBeginDate] = useState("");
+  const [priorCompanyEndDate, setPriorCompanyEndDate] = useState("");
 
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
@@ -38,16 +40,45 @@ const PriorWorkHistory = () => {
             </h3>
 
             <Collapse isOpen={isOpen}>
+
               <FormGroup className="custom-form-group">
-                <Label for="priorWorkHistory">Prior Work History</Label>
+                <Label for="priorCompanyName">Prior Company Name</Label>
                 <Input
                   className="form-control mb-3"
                   type="text"
-                  name="priorWorkHistory"
-                  id="priorWorkHistory"
-                  placeholder="Enter prior work history"
-                  value={priorWorkHistory}
-                  onChange={(e) => setPriorWorkHistory(e.target.value)}
+                  name="priorCompanyName"
+                  id="priorCompanyName"
+                  placeholder="Enter prior company name"
+                  value={priorCompanyName}
+                  onChange={(e) => setPriorCompanyName(e.target.value)}
+                />
+              </FormGroup>
+
+              <FormGroup className="custom-form-group">
+                <Label for="priorCompanyBeginDate">
+                  Prior Company Begin Date
+                </Label>
+                <Input
+                  className="form-control mb-3"
+                  type="date"
+                  name="priorCompanyBeginDate"
+                  id="priorCompanyBeginDate"
+                  placeholder="Enter prior company begin date"
+                  value={priorCompanyBeginDate}
+                  onChange={(e) => setPriorCompanyBeginDate(e.target.value)}
+                />
+              </FormGroup>
+
+              <FormGroup className="custom-form-group">
+                <Label for="priorCompanyEndDate">Prior Company End Date</Label>
+                <Input
+                  className="form-control mb-3"
+                  type="date"
+                  name="priorCompanyEndDate"
+                  id="priorCompanyEndDate"
+                  placeholder="Enter prior company end date"
+                  value={priorCompanyEndDate}
+                  onChange={(e) => setPriorCompanyEndDate(e.target.value)}
                 />
               </FormGroup>
             </Collapse>
