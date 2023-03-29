@@ -14,11 +14,12 @@ const JobDescription = () => {
   const [appCompany, setAppCompany] = useState("");
   const [appEmploymentDateBegin, setAppEmploymentDateBegin] = useState("");
   const [appEmploymentDateEnd, setAppEmploymentDateEnd] = useState("");
-  const [doesApplicantWork, setDoesApplicantWork] = useState(false);
   const [workHoursPerDay, setWorkHoursPerDay] = useState("");
   const [workHoursPerWeek, setWorkHoursPerWeek] = useState("");
   const [jobDescription, setJobDescription] = useState("");
+  const [liftingRequirement, setLiftingRequirement] = useState("");
   const [toolsAndBodyParts, setToolsAndBodyParts] = useState("");
+  const [activityFrequency, setActivityFrequency] = useState("");
 
   const [exposureTypes, setExposureTypes] = useState({
     chemicals: false,
@@ -31,6 +32,7 @@ const JobDescription = () => {
     wetness: false,
     heights: false,
     temperatureVariations: false,
+    notexposed: false,
   });
   const [physicalActivities, setPhysicalActivities] = useState({
     standing: false,
@@ -155,36 +157,6 @@ const JobDescription = () => {
               </FormGroup>
 
               <FormGroup className="custom-form-group">
-                <Label for="doesApplicantWork">
-                  Does the applicant still work?
-                </Label>
-                <FormGroup check>
-                  <Label check>
-                    <Input
-                      type="checkbox"
-                      name="doesApplicantWork"
-                      value="true"
-                      checked={doesApplicantWork}
-                      onChange={(e) => setDoesApplicantWork(true)}
-                    />{" "}
-                    Yes
-                  </Label>
-                </FormGroup>
-                <FormGroup check>
-                  <Label check>
-                    <Input
-                      type="checkbox"
-                      name="doesApplicantWork"
-                      value="false"
-                      checked={!doesApplicantWork}
-                      onChange={(e) => setDoesApplicantWork(false)}
-                    />{" "}
-                    No
-                  </Label>
-                </FormGroup>
-              </FormGroup>
-
-              <FormGroup className="custom-form-group">
                 <Label for="workHoursPerDay">Work Hours Per Day</Label>
                 <Input
                   className="form-control mb-3"
@@ -220,6 +192,22 @@ const JobDescription = () => {
                   placeholder="Enter job description"
                   value={jobDescription}
                   onChange={(e) => setJobDescription(e.target.value)}
+                />
+              </FormGroup>
+
+              <FormGroup className="custom-form-group">
+                <Label for="liftingRequirement">
+                  Was required to lift and carry + weighing up to approximately
+                  + pounds.
+                </Label>
+                <Input
+                  className="form-control mb-3"
+                  type="text"
+                  name="liftingRequirement"
+                  id="liftingRequirement"
+                  placeholder="Enter lifting requirement"
+                  value={liftingRequirement}
+                  onChange={(e) => setLiftingRequirement(e.target.value)}
                 />
               </FormGroup>
 
@@ -350,6 +338,32 @@ const JobDescription = () => {
                     Temperature Variations
                   </Label>
                 </FormGroup>
+
+                <FormGroup check>
+                  <Label check>
+                    <Input
+                      type="checkbox"
+                      name="notexposed"
+                      checked={exposureTypes.notexposed}
+                      onChange={handleExposureTypeChange}
+                    />{" "}
+                    Not Exposed
+                  </Label>
+                </FormGroup>
+              </FormGroup>
+
+              <FormGroup className="custom-form-group">
+                <Label for="activityFrequency">
+                  Physical Activities were... occasional, frequent or repetitive
+                </Label>
+                <Input
+                  type="text"
+                  name="activityFrequency"
+                  id="activityFrequency"
+                  placeholder="enter occasional, frequent or repetitive"
+                  value={activityFrequency}
+                  onChange={setActivityFrequency}
+                />
               </FormGroup>
 
               <FormGroup className="custom-form-group">
