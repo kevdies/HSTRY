@@ -45,7 +45,7 @@ const Medications = () => {
                   type="textarea"
                   name="medications"
                   id="medications"
-                  placeholder="Enter medications"
+                  placeholder="Enter current medications"
                   value={medications}
                   onChange={(e) => setMedications(e.target.value)}
                 />
