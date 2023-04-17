@@ -9,20 +9,33 @@ const Attention = () => {
   const [adjusterCity, setAdjusterCity] = useState("");
   const [adjusterState, setAdjusterState] = useState("");
   const [adjusterZip, setAdjusterZip] = useState("");
-  const [lawyerName, setLawyerName] = useState("");
-  const [lawyerCompany, setLawyerCompany] = useState("");
-  const [lawyerAddress1, setLawyerAddress1] = useState("");
-  const [lawyerAddress2, setLawyerAddress2] = useState("");
-  const [lawyerCity, setLawyerCity] = useState("");
-  const [lawyerState, setLawyerState] = useState("");
-  const [lawyerZip, setLawyerZip] = useState("");
-  const [lawyer2Name, setLawyer2Name] = useState("");
-  const [lawyer2Company, setLawyer2Company] = useState("");
-  const [lawyer2Address1, setLawyer2Address1] = useState("");
-  const [lawyer2Address2, setLawyer2Address2] = useState("");
-  const [lawyer2City, setLawyer2City] = useState("");
-  const [lawyer2State, setLawyer2State] = useState("");
-  const [lawyer2Zip, setLawyer2Zip] = useState("");
+  const [lawyers, setLawyers] = useState([
+    {
+      name: "",
+      company: "",
+      address1: "",
+      address2: "",
+      city: "",
+      state: "",
+      zip: "",
+    },
+    {
+      name: "",
+      company: "",
+      address1: "",
+      address2: "",
+      city: "",
+      state: "",
+      zip: "",
+    },
+  ]);
+
+   const handleLawyerChange = (e, index) => {
+     const { name, value } = e.target;
+     const newLawyers = [...lawyers];
+     newLawyers[index][name] = value;
+     setLawyers(newLawyers);
+   };
 
   //toggle collapse of form group
   const [isOpen, setIsOpen] = useState(false);
@@ -136,176 +149,95 @@ const Attention = () => {
                   onChange={(e) => setAdjusterZip(e.target.value)}
                 />
               </FormGroup>
-              <h3>Lawyer Information</h3>
-              <FormGroup className="custom-form-group">
-                <Label for="lawyerName">Lawyer Name</Label>
-                <Input
-                  className="form-control mb-3"
-                  type="text"
-                  name="lawyerName"
-                  id="lawyerName"
-                  placeholder="Enter lawyer name"
-                  value={lawyerName}
-                  onChange={(e) => setLawyerName(e.target.value)}
-                />
-              </FormGroup>
-              <FormGroup className="custom-form-group">
-                <Label for="lawyerCompany">Lawyer Company</Label>
-                <Input
-                  className="form-control mb-3"
-                  type="text"
-                  name="lawyerCompany"
-                  id="lawyerCompany"
-                  placeholder="Enter lawyer company"
-                  value={lawyerCompany}
-                  onChange={(e) => setLawyerCompany(e.target.value)}
-                />
-              </FormGroup>
-              <FormGroup className="custom-form-group">
-                <Label for="lawyerAddress1">Lawyer Address 1</Label>
-                <Input
-                  className="form-control mb-3"
-                  type="text"
-                  name="lawyerAddress1"
-                  id="lawyerAddress1"
-                  placeholder="Enter lawyer address 1"
-                  value={lawyerAddress1}
-                  onChange={(e) => setLawyerAddress1(e.target.value)}
-                />
-              </FormGroup>
-              <FormGroup className="custom-form-group">
-                <Label for="lawyerAddress2">Lawyer Address 2</Label>
-                <Input
-                  className="form-control mb-3"
-                  type="text"
-                  name="lawyerAddress2"
-                  id="lawyerAddress2"
-                  placeholder="Enter lawyer address 2"
-                  value={lawyerAddress2}
-                  onChange={(e) => setLawyerAddress2(e.target.value)}
-                />
-              </FormGroup>
-              <FormGroup className="custom-form-group">
-                <Label for="lawyerCity">Lawyer City</Label>
-                <Input
-                  className="form-control mb-3"
-                  type="text"
-                  name="lawyerCity"
-                  id="lawyerCity"
-                  placeholder="Enter lawyer city"
-                  value={lawyerCity}
-                  onChange={(e) => setLawyerCity(e.target.value)}
-                />
-              </FormGroup>
-              <FormGroup className="custom-form-group">
-                <Label for="lawyerState">Lawyer State</Label>
-                <Input
-                  className="form-control mb-3"
-                  type="text"
-                  name="lawyerState"
-                  id="lawyerState"
-                  placeholder="Enter lawyer state"
-                  value={lawyerState}
-                  onChange={(e) => setLawyerState(e.target.value)}
-                />
-              </FormGroup>
-              <FormGroup className="custom-form-group">
-                <Label for="lawyerZip">Lawyer Zip</Label>
-                <Input
-                  className="form-control mb-3"
-                  type="text"
-                  name="lawyerZip"
-                  id="lawyerZip"
-                  placeholder="Enter lawyer zip"
-                  value={lawyerZip}
-                  onChange={(e) => setLawyerZip(e.target.value)}
-                />
-              </FormGroup>
-              <h3>Lawyer Information</h3>
-              <FormGroup className="custom-form-group">
-                <Label for="lawyer2Name">Lawyer Name</Label>
-                <Input
-                  className="form-control mb-3"
-                  type="text"
-                  name="lawyer2Name"
-                  id="lawyer2Name"
-                  placeholder="Enter lawyer name"
-                  value={lawyer2Name}
-                  onChange={(e) => setLawyer2Name(e.target.value)}
-                />
-              </FormGroup>
-              <FormGroup className="custom-form-group">
-                <Label for="lawyer2Company">Lawyer Company</Label>
-                <Input
-                  className="form-control mb-3"
-                  type="text"
-                  name="lawyer2Company"
-                  id="lawyer2Company"
-                  placeholder="Enter lawyer company"
-                  value={lawyer2Company}
-                  onChange={(e) => setLawyer2Company(e.target.value)}
-                />
-              </FormGroup>
-              <FormGroup className="custom-form-group">
-                <Label for="lawyer2Address1">Lawyer Address 1</Label>
-                <Input
-                  className="form-control mb-3"
-                  type="text"
-                  name="lawyer2Address1"
-                  id="lawyer2Address1"
-                  placeholder="Enter lawyer address 1"
-                  value={lawyer2Address1}
-                  onChange={(e) => setLawyer2Address1(e.target.value)}
-                />
-              </FormGroup>
-              <FormGroup className="custom-form-group">
-                <Label for="lawyer2Address2">Lawyer Address 2</Label>
-                <Input
-                  className="form-control mb-3"
-                  type="text"
-                  name="lawyer2Address2"
-                  id="lawyer2Address2"
-                  placeholder="Enter lawyer address 2"
-                  value={lawyer2Address2}
-                  onChange={(e) => setLawyer2Address2(e.target.value)}
-                />
-              </FormGroup>
-              <FormGroup className="custom-form-group">
-                <Label for="lawyer2City">Lawyer City</Label>
-                <Input
-                  className="form-control mb-3"
-                  type="text"
-                  name="lawyer2City"
-                  id="lawyer2City"
-                  placeholder="Enter lawyer city"
-                  value={lawyer2City}
-                  onChange={(e) => setLawyer2City(e.target.value)}
-                />
-              </FormGroup>
-              <FormGroup className="custom-form-group">
-                <Label for="lawyer2State">Lawyer State</Label>
-                <Input
-                  className="form-control mb-3"
-                  type="text"
-                  name="lawyer2State"
-                  id="lawyer2State"
-                  placeholder="Enter lawyer state"
-                  value={lawyer2State}
-                  onChange={(e) => setLawyer2State(e.target.value)}
-                />
-              </FormGroup>
-              <FormGroup className="custom-form-group">
-                <Label for="lawyer2Zip">Lawyer Zip</Label>
-                <Input
-                  className="form-control mb-3"
-                  type="text"
-                  name="lawyer2Zip"
-                  id="lawyer2Zip"
-                  placeholder="Enter lawyer zip"
-                  value={lawyer2Zip}
-                  onChange={(e) => setLawyer2Zip(e.target.value)}
-                />
-              </FormGroup>
+              {lawyers.map((lawyer, index) => (
+                <div key={index}>
+                  <h3>Lawyer {index + 1} Information</h3>
+                  <FormGroup className="custom-form-group">
+                    <Label for={`lawyerName${index}`}>Lawyer Name</Label>
+                    <Input
+                      className="form-control mb-3"
+                      type="text"
+                      name="name"
+                      id={`lawyerName${index}`}
+                      placeholder="Enter lawyer name"
+                      value={lawyer.name}
+                      onChange={(e) => handleLawyerChange(e, index)}
+                    />
+                  </FormGroup>
+                  <FormGroup className="custom-form-group">
+                    <Label for={`lawyerCompany${index}`}>Company</Label>
+                    <Input
+                      className="form-control mb-3"
+                      type="text"
+                      name="company"
+                      id={`lawyerCompany${index}`}
+                      placeholder="Enter company name"
+                      value={lawyer.company}
+                      onChange={(e) => handleLawyerChange(e, index)}
+                    />
+                  </FormGroup>
+                  <FormGroup className="custom-form-group">
+                    <Label for={`lawyerAddress1${index}`}>Address 1</Label>
+                    <Input
+                      className="form-control mb-3"
+                      type="text"
+                      name="address1"
+                      id={`lawyerAddress1${index}`}
+                      placeholder="Enter address line 1"
+                      value={lawyer.address1}
+                      onChange={(e) => handleLawyerChange(e, index)}
+                    />
+                  </FormGroup>
+                  <FormGroup className="custom-form-group">
+                    <Label for={`lawyerAddress2${index}`}>Address 2</Label>
+                    <Input
+                      className="form-control mb-3"
+                      type="text"
+                      name="address2"
+                      id={`lawyerAddress2${index}`}
+                      placeholder="Enter address line 2"
+                      value={lawyer.address2}
+                      onChange={(e) => handleLawyerChange(e, index)}
+                    />
+                  </FormGroup>
+                  <FormGroup className="custom-form-group">
+                    <Label for={`lawyerCity${index}`}>City</Label>
+                    <Input
+                      className="form-control mb-3"
+                      type="text"
+                      name="city"
+                      id={`lawyerCity${index}`}
+                      placeholder="Enter city"
+                      value={lawyer.city}
+                      onChange={(e) => handleLawyerChange(e, index)}
+                    />
+                  </FormGroup>
+                  <FormGroup className="custom-form-group">
+                    <Label for={`lawyerState${index}`}>State</Label>
+                    <Input
+                      className="form-control mb-3"
+                      type="text"
+                      name="state"
+                      id={`lawyerState${index}`}
+                      placeholder="Enter state"
+                      value={lawyer.state}
+                      onChange={(e) => handleLawyerChange(e, index)}
+                    />
+                  </FormGroup>
+                  <FormGroup className="custom-form-group">
+                    <Label for={`lawyerZip${index}`}>Zip Code</Label>
+                    <Input
+                      className="form-control mb-3"
+                      type="text"
+                      name="zip"
+                      id={`lawyerZip${index}`}
+                      placeholder="Enter zip code"
+                      value={lawyer.zip}
+                      onChange={(e) => handleLawyerChange(e, index)}
+                    />
+                  </FormGroup>
+                </div>
+              ))}
             </Collapse>
           </Col>
         </Row>

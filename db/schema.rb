@@ -10,10 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_03_28_151346) do
+ActiveRecord::Schema.define(version: 2023_04_17_203804) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "adjusters", force: :cascade do |t|
+    t.string "name"
+    t.string "company"
+    t.string "address1"
+    t.string "address2"
+    t.string "city"
+    t.string "state"
+    t.string "zip"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "attentions", force: :cascade do |t|
     t.string "adjuster_name"
@@ -30,6 +42,18 @@ ActiveRecord::Schema.define(version: 2023_03_28_151346) do
     t.string "lawyer_city"
     t.string "lawyer_state"
     t.string "lawyer_zip"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "lawyers", force: :cascade do |t|
+    t.string "name"
+    t.string "company"
+    t.string "address1"
+    t.string "address2"
+    t.string "city"
+    t.string "state"
+    t.string "zip"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

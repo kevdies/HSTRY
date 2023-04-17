@@ -1,0 +1,2 @@
+class Adjuster < ApplicationRecord
+end

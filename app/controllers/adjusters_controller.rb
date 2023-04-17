@@ -1,0 +1,2 @@
+class AdjustersController < ApplicationController
+end
