@@ -1,0 +1,2 @@
+class SurgicalHistory < ApplicationRecord
+end

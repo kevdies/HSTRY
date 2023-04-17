@@ -1,0 +1,2 @@
+class PriorNonWorkInjuriesController < ApplicationController
+end

@@ -1,0 +1,2 @@
+class FamilyMedHistoriesController < ApplicationController
+end

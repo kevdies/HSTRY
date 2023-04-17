@@ -1,0 +1,2 @@
+class SocialHistory < ApplicationRecord
+end

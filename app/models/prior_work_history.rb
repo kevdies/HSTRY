@@ -1,0 +1,2 @@
+class PriorWorkHistory < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class SocialHistoriesController < ApplicationController
+end

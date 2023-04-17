@@ -1,0 +1,2 @@
+class PriorWorkInjury < ApplicationRecord
+end

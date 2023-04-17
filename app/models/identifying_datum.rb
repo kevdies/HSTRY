@@ -1,0 +1,2 @@
+class IdentifyingDatum < ApplicationRecord
+end

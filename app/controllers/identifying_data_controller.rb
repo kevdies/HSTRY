@@ -1,0 +1,2 @@
+class IdentifyingDataController < ApplicationController
+end

@@ -1,0 +1,2 @@
+class PastMedHistory < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class PriorWorkHistoriesController < ApplicationController
+end

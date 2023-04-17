@@ -1,0 +1,2 @@
+class FamilyMedHistory < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class PriorNonWorkInjury < ApplicationRecord
+end

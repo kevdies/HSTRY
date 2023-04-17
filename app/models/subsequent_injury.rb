@@ -1,0 +1,2 @@
+class SubsequentInjury < ApplicationRecord
+end
