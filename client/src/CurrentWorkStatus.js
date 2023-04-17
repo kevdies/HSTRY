@@ -7,6 +7,7 @@ import {
   Row,
   Col,
   Collapse,
+  Button
 } from "reactstrap";
 
 const CurrentWorkStatus = () => {
@@ -79,6 +80,13 @@ const CurrentWorkStatus = () => {
                   onChange={(e) => setCurrentDisabilityBenefits(e.target.value)}
                 />
               </FormGroup>
+              <Button
+                color="secondary"
+                onClick={toggle}
+                style={{ marginTop: "1rem" }}
+              >
+                Close
+              </Button>
             </Collapse>
           </Col>
         </Row>

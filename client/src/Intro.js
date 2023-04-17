@@ -7,6 +7,7 @@ import {
   Row,
   Col,
   Collapse,
+  Button
 } from "reactstrap";
 
 const Intro = () => {
@@ -93,6 +94,13 @@ const Intro = () => {
                   onChange={(e) => setHistorian(e.target.value)}
                 />
               </FormGroup>
+              <Button
+                color="secondary"
+                onClick={toggle}
+                style={{ marginTop: "1rem" }}
+              >
+                Close
+              </Button>
             </Collapse>
           </Col>
         </Row>

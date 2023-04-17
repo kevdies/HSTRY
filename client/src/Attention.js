@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FormGroup, Label, Input, Container, Row, Col, Collapse } from "reactstrap";
+import { FormGroup, Label, Input, Container, Row, Col, Collapse, Button } from "reactstrap";
 
 const Attention = () => {
   const [adjusterName, setAdjusterName] = useState("");
@@ -238,6 +238,13 @@ const Attention = () => {
                   </FormGroup>
                 </div>
               ))}
+              <Button
+                color="secondary"
+                onClick={toggle}
+                style={{ marginTop: "1rem" }}
+              >
+                Close
+              </Button>
             </Collapse>
           </Col>
         </Row>

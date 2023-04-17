@@ -7,6 +7,7 @@ import {
   Row,
   Col,
   Collapse,
+  Button
 } from "reactstrap";
 
 const Allergies = () => {
@@ -50,6 +51,13 @@ const Allergies = () => {
                   onChange={(e) => setAllergies(e.target.value)}
                 />
               </FormGroup>
+              <Button
+                color="secondary"
+                onClick={toggle}
+                style={{ marginTop: "1rem" }}
+              >
+                Close
+              </Button>
             </Collapse>
           </Col>
         </Row>

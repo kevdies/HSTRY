@@ -7,6 +7,7 @@ import {
   Row,
   Col,
   Collapse,
+  Button
 } from "reactstrap";
 
 const OtherProblems = () => {
@@ -49,6 +50,13 @@ const OtherProblems = () => {
                   />
                 </FormGroup>
               </FormGroup>
+              <Button
+                color="secondary"
+                onClick={toggle}
+                style={{ marginTop: "1rem" }}
+              >
+                Close
+              </Button>
             </Collapse>
           </Col>
         </Row>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FormGroup, Label, Input, Container, Row, Col, Collapse } from "reactstrap";
+import { FormGroup, Label, Input, Container, Row, Col, Collapse, Button } from "reactstrap";
 
 const CaseInfo = () => {
   const [appName, setAppName] = useState("");
@@ -147,7 +147,9 @@ const CaseInfo = () => {
               </FormGroup>
 
               <FormGroup className="custom-form-group">
-                <Label for="evaluationAddress1">Evaluation Address Line 1</Label>
+                <Label for="evaluationAddress1">
+                  Evaluation Address Line 1
+                </Label>
                 <Input
                   className="form-control mb-3"
                   type="text"
@@ -160,7 +162,9 @@ const CaseInfo = () => {
               </FormGroup>
 
               <FormGroup className="custom-form-group">
-                <Label for="evaluationAddress2">Evaluation Address Line 2</Label>
+                <Label for="evaluationAddress2">
+                  Evaluation Address Line 2
+                </Label>
                 <Input
                   className="form-control mb-3"
                   type="text"
@@ -210,6 +214,13 @@ const CaseInfo = () => {
                   onChange={(e) => setEvaluationZip(e.target.value)}
                 />
               </FormGroup>
+              <Button
+                color="secondary"
+                onClick={toggle}
+                style={{ marginTop: "1rem" }}
+              >
+                Close
+              </Button>
             </Collapse>
           </Col>
         </Row>

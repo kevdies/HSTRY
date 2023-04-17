@@ -7,6 +7,7 @@ import {
   Row,
   Col,
   Collapse,
+  Button
 } from "reactstrap";
 
 const SurgicalHistory = () => {
@@ -39,9 +40,7 @@ const SurgicalHistory = () => {
 
             <Collapse isOpen={isOpen}>
               <FormGroup className="custom-form-group">
-                <Label for="surgicalHistory">
-                  Surgical History
-                </Label>
+                <Label for="surgicalHistory">Surgical History</Label>
                 <Input
                   className="form-control mb-3"
                   type="textarea"
@@ -52,6 +51,13 @@ const SurgicalHistory = () => {
                   onChange={(e) => setSurgicalHistory(e.target.value)}
                 />
               </FormGroup>
+              <Button
+                color="secondary"
+                onClick={toggle}
+                style={{ marginTop: "1rem" }}
+              >
+                Close
+              </Button>
             </Collapse>
           </Col>
         </Row>
