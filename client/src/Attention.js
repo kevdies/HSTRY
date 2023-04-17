@@ -34,7 +34,7 @@ const Attention = () => {
         <Row>
           <Col>
             <h3>
-              Adjuster Information{" "}
+              Attention{" "}
               {isOpen ? (
                 <i
                   className="bi bi-caret-up-fill"
@@ -51,6 +51,7 @@ const Attention = () => {
             </h3>
 
             <Collapse isOpen={isOpen}>
+              <h3>Adjuster Information</h3>
               <FormGroup className="custom-form-group">
                 <Label for="adjusterName">Adjuster Name</Label>
                 <Input
